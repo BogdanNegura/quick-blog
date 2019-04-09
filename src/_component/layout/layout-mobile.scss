@@ -4,7 +4,7 @@
 
 html,
 body {
-    height: 100%;
+    min-height: 100%;
     font-family: 'Open Sans';
 }
 
@@ -30,6 +30,7 @@ html {
         font-weight: bold;
         // font-size: 2rem;
         font-size: 4rem;
+        margin: 1rem;
     }
 
     .welcome__description {
