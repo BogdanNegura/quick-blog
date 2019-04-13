@@ -2,14 +2,14 @@ extend ../_component/layout/base
 
 block config
     -
-        var title = template.head.title ||'Change me, title'
-        var description = template.head.description || 'change me, I\'m' description'
+        var title = template.config.title || 'Change me, title'
+        var description = template.config.description || `change me, I'm description`
 block content 
     .content
-    each something in template.body
-        if something.type == "h2"
-            h2=something.data
-        if something.type == "p"
-            each paragraph in something.data
-                p=paragraph
-        pre=JSON.stringify{template.body, null, 2}
+        each something in template.body
+            if something.type == "h2"
+                h2=something.data
+            if something.type == "p"
+                each paragraph in something.data
+                    p=paragraph
+            pre=JSON.stringify(template.body, null, 2)
