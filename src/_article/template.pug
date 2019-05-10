@@ -20,9 +20,26 @@ block content
                 each dataValue in something.data
                     pre=dataValue
 
+
+            if something.type == 'ul'
+                ul
+                    each listItem in something.data
+                        li=listItem
+            
+            if something.type == 'h3'
+                h3=something.data
+
             if something.type == "h2"
                 h2=something.data
-            if something.type == "paragraph"
+            if something.type == "paragraph" || something.type == "p"
                 each paragraph in something.data
                     p=paragraph
+            if something.type == "paragraph-safe"
+                each paragraph in something.data
+                    p!=paragraph
+            
+            if something.type == 'hr'
+                hr
+            if something.type == 'img'
+                img(src=something.src)
             //- pre=JSON.stringify(template.body, null, 2)
